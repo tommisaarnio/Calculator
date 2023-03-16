@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="40dp"
+        android:background="#03A9F4"
+        android:gravity="center"
+        android:onClick="add"
+        android:text="+"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FDFCFC"
+        android:textSize="38sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <Button
+        android:id="@+id/buttonSub"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:background="#03A9F4"
+        android:onClick="sub"
+        android:text="-"
+        android:textColor="#F8F5F5"
+        android:textSize="38dp"
+        app:cornerRadius="10dp"
+        app:iconTint="#03B6CD"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <Button
+        android:id="@+id/buttonDiv"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="47dp"
+        android:background="#03A9F4"
+        android:onClick="div"
+        android:text="/"
+        android:textColor="#F6F3F3"
+        android:textSize="38dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <Button
+        android:id="@+id/buttonMul"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="#03A9F4"
+        android:onClick="mul"
+        android:text="X"
+        android:textColor="#F8F5F5"
+        android:textSize="38dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="324dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Kirjoita numero 1"
+        android:hyphenationFrequency="normal"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="324dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Kirjoita numero 2"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:textColor="#050505"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSub" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
